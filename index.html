@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roar Threads - Luxury Fashion</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Signup/Login Page -->
+    <div id="auth-page" class="auth-container">
+        <div class="auth-card">
+            <div class="auth-logo">
+                <div class="logo-circle">
+                    <div class="logo-text">
+                        <div class="heritage">HERITAGE</div>
+                        <div class="roar-threads">ROAR THREADS</div>
+                        <div class="high-end">HIGH END FASHION</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="auth-form-container">
+                <div class="auth-toggle">
+                    <button class="toggle-btn active" data-form="login">Login</button>
+                    <button class="toggle-btn" data-form="signup">Sign Up</button>
+                </div>
+
+                <!-- Login Form -->
+                <form id="login-form" class="auth-form active">
+                    <h2>Welcome Back</h2>
+                    <p class="auth-subtitle">Sign in to continue to your luxury collection</p>
+                    
+                    <div class="form-group">
+                        <label for="login-email" class="form-label">Email Address</label>
+                        <input type="email" id="login-email" class="form-control" required>
+                        <span class="error-message" id="login-email-error"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="login-password" class="form-label">Password</label>
+                        <input type="password" id="login-password" class="form-control" required>
+                        <span class="error-message" id="login-password-error"></span>
+                    </div>
+                    
+                    <button type="submit" class="btn btn--primary btn--full-width">Sign In</button>
+                    
+                    <div class="auth-divider">
+                        <span>Or continue with</span>
+                    </div>
+                    
+                    <div class="social-login">
+                        <button type="button" class="social-btn google-btn" id="google-login">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                                <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                                <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+                                <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+                            </svg>
+                            Continue with Google
+                        </button>
+                        
+                        <button type="button" class="social-btn apple-btn" id="apple-login">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+                            </svg>
+                            Continue with Apple ID
+                        </button>
+                    </div>
+                </form>
+
+                <!-- Signup Form -->
+                <form id="signup-form" class="auth-form">
+                    <h2>Join Roar Threads</h2>
+                    <p class="auth-subtitle">Create your account for exclusive luxury access</p>
+                    
+                    <div class="form-group">
+                        <label for="signup-name" class="form-label">Full Name</label>
+                        <input type="text" id="signup-name" class="form-control" required>
+                        <span class="error-message" id="signup-name-error"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="signup-email" class="form-label">Email Address</label>
+                        <input type="email" id="signup-email" class="form-control" required>
+                        <span class="error-message" id="signup-email-error"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="signup-password" class="form-label">Password</label>
+                        <input type="password" id="signup-password" class="form-control" required>
+                        <span class="error-message" id="signup-password-error"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="signup-confirm" class="form-label">Confirm Password</label>
+                        <input type="password" id="signup-confirm" class="form-control" required>
+                        <span class="error-message" id="signup-confirm-error"></span>
+                    </div>
+                    
+                    <div class="form-group checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="terms-check" required>
+                            <span class="checkmark"></span>
+                            I agree to the <a href="#" target="_blank">Terms of Service</a> and <a href="#" target="_blank">Privacy Policy</a>
+                        </label>
+                    </div>
+                    
+                    <button type="submit" class="btn btn--primary btn--full-width">Create Account</button>
+                    
+                    <div class="auth-divider">
+                        <span>Or continue with</span>
+                    </div>
+                    
+                    <div class="social-login">
+                        <button type="button" class="social-btn google-btn" id="google-signup">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                                <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                                <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+                                <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+                            </svg>
+                            Continue with Google
+                        </button>
+                        
+                        <button type="button" class="social-btn apple-btn" id="apple-signup">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+                            </svg>
+                            Continue with Apple ID
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Homepage -->
+    <div id="homepage" class="homepage hidden">
+        <!-- Header -->
+        <header class="site-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="header-logo">
+                        <div class="logo-circle small">
+                            <div class="logo-text">
+                                <div class="heritage">HERITAGE</div>
+                                <div class="roar-threads">ROAR THREADS</div>
+                                <div class="high-end">HIGH END FASHION</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <nav class="main-navigation">
+                        <ul class="nav-menu">
+                            <li class="nav-item has-dropdown">
+                                <a href="#" class="nav-link">Women</a>
+                                <div class="mega-menu">
+                                    <div class="mega-menu-content">
+                                        <div class="menu-column">
+                                            <h4>Clothing</h4>
+                                            <ul>
+                                                <li><a href="#">Dresses</a></li>
+                                                <li><a href="#">Tops</a></li>
+                                                <li><a href="#">Bottoms</a></li>
+                                                <li><a href="#">Outerwear</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="menu-column">
+                                            <h4>Accessories</h4>
+                                            <ul>
+                                                <li><a href="#">Bags</a></li>
+                                                <li><a href="#">Jewelry</a></li>
+                                                <li><a href="#">Scarves</a></li>
+                                                <li><a href="#">Shoes</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item has-dropdown">
+                                <a href="#" class="nav-link">Men</a>
+                                <div class="mega-menu">
+                                    <div class="mega-menu-content">
+                                        <div class="menu-column">
+                                            <h4>Clothing</h4>
+                                            <ul>
+                                                <li><a href="#">Shirts</a></li>
+                                                <li><a href="#">Pants</a></li>
+                                                <li><a href="#">Jackets</a></li>
+                                                <li><a href="#">Suits</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="menu-column">
+                                            <h4>Accessories</h4>
+                                            <ul>
+                                                <li><a href="#">Bags</a></li>
+                                                <li><a href="#">Watches</a></li>
+                                                <li><a href="#">Belts</a></li>
+                                                <li><a href="#">Shoes</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item"><a href="#" class="nav-link">New Arrivals</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link">Sale</a></li>
+                        </ul>
+                    </nav>
+                    
+                    <div class="header-actions">
+                        <div class="search-container">
+                            <input type="search" class="search-input" placeholder="Search luxury fashion...">
+                            <button class="search-btn"><i class="fas fa-search"></i></button>
+                        </div>
+                        <div class="header-icons">
+                            <button class="icon-btn" id="wishlist-btn">
+                                <i class="far fa-heart"></i>
+                                <span class="badge">0</span>
+                            </button>
+                            <button class="icon-btn" id="cart-btn">
+                                <i class="fas fa-shopping-bag"></i>
+                                <span class="badge">0</span>
+                            </button>
+                            <div class="user-menu">
+                                <button class="user-btn" id="user-menu-btn">
+                                    <i class="fas fa-user"></i>
+                                </button>
+                                <div class="user-dropdown hidden" id="user-dropdown">
+                                    <a href="#" class="dropdown-item">My Account</a>
+                                    <a href="#" class="dropdown-item">Orders</a>
+                                    <a href="#" class="dropdown-item">Wishlist</a>
+                                    <a href="#" class="dropdown-item" id="logout-btn">Sign Out</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-background">
+                <img src="https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/1469d108-cc01-432d-af0a-a88d8f0c3a1a.png" alt="Luxury Fashion Hero" class="hero-image">
+                <div class="hero-overlay"></div>
+            </div>
+            <div class="hero-content">
+                <div class="container">
+                    <div class="hero-text">
+                        <h1 class="hero-title">ROAR THREADS</h1>
+                        <h2 class="hero-subtitle">Where Luxury Meets Contemporary Style</h2>
+                        <p class="hero-description">Discover premium fashion that speaks your language of sophistication</p>
+                        <button class="btn btn--primary btn--lg hero-cta">Shop Collection</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Promotional Banners -->
+        <section class="promotional-banners">
+            <div class="container">
+                <div class="banner-grid">
+                    <div class="banner-item primary-banner">
+                        <h3>Up to 40% Off Selected Items</h3>
+                        <p>Limited time offer on premium pieces</p>
+                        <button class="btn btn--primary">Shop Sale</button>
+                    </div>
+                    <div class="banner-item">
+                        <h4>Free Shipping on Orders $150+</h4>
+                        <p>Complimentary delivery for qualifying orders</p>
+                    </div>
+                    <div class="banner-item">
+                        <h4>New Season Arrivals</h4>
+                        <p>Discover the latest luxury collection</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Collections -->
+        <section class="featured-collections">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Featured Collections</h2>
+                    <p>Curated luxury for the discerning fashion enthusiast</p>
+                </div>
+                
+                <div class="collections-grid">
+                    <div class="collection-card">
+                        <div class="collection-image">
+                            <img src="https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/925c9c36-4796-4630-ad43-6da14a9e515d.png" alt="New Arrivals">
+                            <div class="collection-overlay">
+                                <button class="btn btn--primary">Explore Collection</button>
+                            </div>
+                        </div>
+                        <div class="collection-info">
+                            <h3>New Arrivals</h3>
+                            <p>Latest luxury pieces for the modern wardrobe</p>
+                        </div>
+                    </div>
+                    
+                    <div class="collection-card">
+                        <div class="collection-image">
+                            <img src="https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/6d2b48f9-d955-4d63-9dea-8452475017d1.png" alt="Best Sellers">
+                            <div class="collection-overlay">
+                                <button class="btn btn--primary">Explore Collection</button>
+                            </div>
+                        </div>
+                        <div class="collection-info">
+                            <h3>Best Sellers</h3>
+                            <p>Customer favorites that define contemporary elegance</p>
+                        </div>
+                    </div>
+                    
+                    <div class="collection-card">
+                        <div class="collection-image">
+                            <img src="https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/925c9c36-4796-4630-ad43-6da14a9e515d.png" alt="Limited Edition">
+                            <div class="collection-overlay">
+                                <button class="btn btn--primary">Explore Collection</button>
+                            </div>
+                        </div>
+                        <div class="collection-info">
+                            <h3>Limited Edition</h3>
+                            <p>Exclusive pieces for the discerning fashion enthusiast</p>
+                        </div>
+                    </div>
+                    
+                    <div class="collection-card">
+                        <div class="collection-image">
+                            <img src="https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/6d2b48f9-d955-4d63-9dea-8452475017d1.png" alt="Seasonal Collection">
+                            <div class="collection-overlay">
+                                <button class="btn btn--primary">Explore Collection</button>
+                            </div>
+                        </div>
+                        <div class="collection-info">
+                            <h3>Seasonal Collection</h3>
+                            <p>Curated styles for every season of sophistication</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Brand Values -->
+        <section class="brand-values">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Crafted Excellence. Ethical Production. Timeless Style.</h2>
+                    <p>Our commitment to quality and sustainability defines every piece we create</p>
+                </div>
+                
+                <div class="values-grid">
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <h3>Sustainable Materials</h3>
+                        <p>Ethically sourced, eco-friendly fabrics that respect our planet</p>
+                    </div>
+                    
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <i class="fas fa-hands"></i>
+                        </div>
+                        <h3>Handcrafted Quality</h3>
+                        <p>Artisanal attention to every detail, ensuring exceptional craftsmanship</p>
+                    </div>
+                    
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3>Ethical Production</h3>
+                        <p>Fair trade and responsible manufacturing practices</p>
+                    </div>
+                    
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <i class="fas fa-crown"></i>
+                        </div>
+                        <h3>Timeless Design</h3>
+                        <p>Classic styles that transcend trends and seasons</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="testimonials">
+            <div class="container">
+                <div class="section-header">
+                    <h2>What Our Customers Say</h2>
+                    <p>Join thousands of satisfied customers who trust Roar Threads</p>
+                </div>
+                
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <blockquote>
+                            "Roar Threads has completely transformed my wardrobe. The quality is unmatched and the designs are simply stunning."
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">IC</div>
+                            <div class="author-info">
+                                <h4>Isabella Chen</h4>
+                                <span>Verified Customer</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <blockquote>
+                            "As someone who values both style and sustainability, Roar Threads delivers on every front. Exceptional craftsmanship."
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">MW</div>
+                            <div class="author-info">
+                                <h4>Marcus Williams</h4>
+                                <span>Verified Customer</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <blockquote>
+                            "The attention to detail in every piece is remarkable. This is luxury fashion at its finest."
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">SR</div>
+                            <div class="author-info">
+                                <h4>Sophia Rodriguez</h4>
+                                <span>Verified Customer</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="press-mentions">
+                    <h3>As Featured In</h3>
+                    <div class="press-logos">
+                        <div class="press-logo">Vogue</div>
+                        <div class="press-logo">Harper's Bazaar</div>
+                        <div class="press-logo">Elle</div>
+                        <div class="press-logo">GQ</div>
+                        <div class="press-logo">WWD</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Signup -->
+        <section class="newsletter">
+            <div class="container">
+                <div class="newsletter-content">
+                    <div class="newsletter-text">
+                        <h2>Join The Roar Threads Family</h2>
+                        <p>Get 15% off your first order and be the first to know about new collections, exclusive offers, and fashion insights.</p>
+                    </div>
+                    <form class="newsletter-form" id="newsletter-form">
+                        <div class="newsletter-input-group">
+                            <input type="email" class="newsletter-input" placeholder="Enter your email address" required>
+                            <button type="submit" class="btn btn--primary">Get 15% Off</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="site-footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-brand">
+                        <div class="logo-circle small">
+                            <div class="logo-text">
+                                <div class="heritage">HERITAGE</div>
+                                <div class="roar-threads">ROAR THREADS</div>
+                                <div class="high-end">HIGH END FASHION</div>
+                            </div>
+                        </div>
+                        <p>Luxury fashion that speaks your language of sophistication. Crafted with excellence, produced ethically, designed timelessly.</p>
+                        <div class="social-links">
+                            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+                            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                            <a href="#" target="_blank"><i class="fab fa-pinterest"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-links">
+                        <div class="footer-column">
+                            <h4>Shop</h4>
+                            <ul>
+                                <li><a href="#">Women</a></li>
+                                <li><a href="#">Men</a></li>
+                                <li><a href="#">Accessories</a></li>
+                                <li><a href="#">New Arrivals</a></li>
+                                <li><a href="#">Sale</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="footer-column">
+                            <h4>Customer Care</h4>
+                            <ul>
+                                <li><a href="#">Size Guide</a></li>
+                                <li><a href="#">Shipping Info</a></li>
+                                <li><a href="#">Returns & Exchanges</a></li>
+                                <li><a href="#">FAQ</a></li>
+                                <li><a href="#">Contact Us</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="footer-column">
+                            <h4>Company</h4>
+                            <ul>
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">Careers</a></li>
+                                <li><a href="#">Sustainability</a></li>
+                                <li><a href="#">Press</a></li>
+                                <li><a href="#">Store Locator</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="footer-column">
+                            <h4>Legal</h4>
+                            <ul>
+                                <li><a href="#" target="_blank">Privacy Policy</a></li>
+                                <li><a href="#" target="_blank">Terms of Service</a></li>
+                                <li><a href="#" target="_blank">Cookie Policy</a></li>
+                                <li><a href="#">Accessibility</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-bottom">
+                    <div class="footer-bottom-content">
+                        <p>&copy; 2025 Roar Threads. All rights reserved.</p>
+                        <div class="payment-methods">
+                            <i class="fab fa-cc-visa"></i>
+                            <i class="fab fa-cc-mastercard"></i>
+                            <i class="fab fa-cc-amex"></i>
+                            <i class="fab fa-cc-paypal"></i>
+                            <i class="fab fa-apple-pay"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
