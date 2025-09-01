@@ -67,23 +67,6 @@
                 <i class="fab fa-linkedin-in"></i>
               </a>               
             </div>  
-              const nav = useNavigate();
-            async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
-  event.preventDefault();
-
-  try {
-    await Auth.signIn(email, password);
-    userHasAuthenticated(true);
-    nav("/");
-  } catch (error) {
-    if (error instanceof Error) {
-      alert(error.message);
-    } else {
-      alert(String(error));
-    }
-  }
-}
-              import { useNavigate } from "react-router-dom";
           </form>
           <form action="#" class="sign-up-form">
             <div class="logo-container">
@@ -154,6 +137,23 @@
       </div>
     </div>
 
+              const nav = useNavigate();
+            async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+  event.preventDefault();
+
+  try {
+    await Auth.signIn(email, password);
+    userHasAuthenticated(true);
+    nav("/");
+  } catch (error) {
+    if (error instanceof Error) {
+      alert(error.message);
+    } else {
+      alert(String(error));
+    }
+  }
+}
+              import { useNavigate } from "react-router-dom";
     <script src="app.js"></script>
 
      <!-- Homepage -->
