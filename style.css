@@ -398,3 +398,9 @@ form.sign-in-form {
     left: 50%;
   }
 }
+.eye{
+  position: absolute; 
+}
+#hide1{
+  display: none;
+}
