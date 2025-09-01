@@ -11,6 +11,26 @@
     <title>Roar Threads</title>
   </head>
   <body>
+     <!-- Connect Supabase -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script>
+        const SUPABASE_URL = 'https://pysxljuvlxtxyngyzyea.supabase.co'; // Replace with your project URL
+        const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InB5c3hsanV2bHh0eHluZ3l6eWVhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTY2NTc3MDMsImV4cCI6MjA3MjIzMzcwM30.nSJgg4cV8gzyDBlq_vNQrO_fPENDCsHw8oN3XlvSejI'; // Replace with your public API key
+
+        const supabase = Supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+        // You can now use 'supabase' to interact with your database, authentication, etc.
+        async function fetchData() {
+            const { data, error } = await supabase
+                .from('Roar Threads') // Replace with your table name
+                .select('*');
+            if (error) console.error('Error fetching data:', error.message);
+            else console.log('Data:', data);
+        }
+
+        fetchData(); // Example usage
+    </script>
+
     <div class="container">
       <div class="forms-container">
         <div class="signin-signup">
