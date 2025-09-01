@@ -136,24 +136,6 @@
         </div>
       </div>
     </div>
-
-              const nav = useNavigate();
-            async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
-  event.preventDefault();
-
-  try {
-    await Auth.signIn(email, password);
-    userHasAuthenticated(true);
-    nav("/");
-  } catch (error) {
-    if (error instanceof Error) {
-      alert(error.message);
-    } else {
-      alert(String(error));
-    }
-  }
-}
-              import { useNavigate } from "react-router-dom";
     <script src="app.js"></script>
 
      <!-- Homepage -->
